@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+
+
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, itaque distinctio, doloremque provident neque qui nostrum consequuntur fuga laudantium mollitia sapiente soluta ex nam fugit corrupti veniam deserunt. Officiis voluptatem obcaecati vel repudiandae ratione suscipit consectetur, aliquam laborum mollitia. Laudantium vero optio voluptatibus voluptatum doloribus iure necessitatibus possimus veniam, eius vitae, delectus dignissimos sapiente in laborum numquam earum. Porro perferendis sapiente accusamus nesciunt eius facilis veniam pariatur fuga sunt iure ipsa libero esse aspernatur natus a, neque, optio earum! Culpa distinctio rerum, accusamus voluptate officiis nulla qui est temporibus consectetur quo ullam ipsam error suscipit facere deleniti illo officia odio.<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, itaque distinctio, doloremque provident neque qui nostrum consequuntur fuga laudantium mollitia sapiente soluta ex nam fugit corrupti veniam deserunt. Officiis voluptatem obcaecati vel repudiandae ratione suscipit consectetur, aliquam laborum mollitia. Laudantium vero optio voluptatibus voluptatum doloribus iure necessitatibus possimus veniam<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, itaque distinctio, doloremque provident neque qui nostrum consequuntur fuga laudantium mollitia sapiente soluta ex nam fugit corrupti veniam deserunt. Officiis voluptatem obcaecati vel repudiandae ratione suscipit consectetur, aliquam laborum mollitia. Laudantium vero optio voluptatibus voluptatum doloribus iure necessitatibus possimus veniam, eius vitae, delectus dignissimos sapiente in laborum numquam earum.
+            sapiente soluta ex nam fugit corrupti veniam deserunt. Officiis voluptatem obcaecati vel repudiandae ratione suscipit consectetur, aliquam laborum mollitia. Laudantium vero optio voluptatibus voluptatum doloribus iure necessitatibus possimus veniam<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, itaque distinctio, doloremque provident neque qui nostrum consequuntur fuga laudantium mollitia sapiente soluta ex nam fugit corrupti veniam deserunt. Officiis voluptatem obcaecati vel repudiandae ratione suscipit consectetur, aliquam laborum mollitia. Laudantium vero optio voluptatibus voluptatum doloribus iure necessitatibus possimus veniam, eius vitae, delectus dignissimos sapiente in laborum numquam earum.</p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25+ 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            // text.style.marginTop = value * 1.5 + 'px';
+            // btn.style.marginTop = value * 1.5 + 'px';
+        })
+
+    </script>
+    
+</body>
+</html>
